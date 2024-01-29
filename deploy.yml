@@ -1,0 +1,9 @@
+---
+- name: Deploy Web Page
+  hosts: all
+  tasks:
+    - name: Copy Web Page Files
+      copy:
+        src: "https://github.com/izzkandarrr/deploy.git"
+        dest: "/var/www/html"
+      become: yes
